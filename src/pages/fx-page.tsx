@@ -232,7 +232,7 @@ export function FxPage() {
       <PageHeader
         eyebrow="FX Desk"
         title="PanAfrika foreign exchange trading desk"
-        description="Live-looking retail conversion, branch rate board, treasury dealer workflow, and simulated historical price action from one FX workspace."
+        description="Spot conversion, indicative rate board, dealer positions, and historical price action across supported currency pairs."
       />
 
       <div className="overflow-x-auto">

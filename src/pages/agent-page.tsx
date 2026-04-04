@@ -276,7 +276,7 @@ export function AgentPage() {
       <PageHeader
         eyebrow="Agent Banking"
         title="Last-mile distribution network and field transactions"
-        description="Run assisted-service transactions, monitor float, and manage the PanAfrika agent network across rural and semi-urban channels."
+        description="Assisted-service transactions, float monitoring, and agent network visibility across last-mile channels."
       />
 
       <div className="overflow-x-auto">

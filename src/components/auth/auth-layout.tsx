@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Landmark, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ThemeToggle } from "@/components/landing/theme-toggle";
@@ -23,13 +23,21 @@ export function AuthLayout({
 }) {
   const { theme, toggleTheme } = useTheme();
   const [quoteIndex, setQuoteIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
+  const timerRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const timer = window.setInterval(() => {
-      setQuoteIndex((current) => (current + 1) % quotes.length);
+    timerRef.current = window.setInterval(() => {
+      setVisible(false);
+      window.setTimeout(() => {
+        setQuoteIndex((current) => (current + 1) % quotes.length);
+        setVisible(true);
+      }, 350);
     }, 4200);
 
-    return () => window.clearInterval(timer);
+    return () => {
+      if (timerRef.current) window.clearInterval(timerRef.current);
+    };
   }, []);
 
   return (
@@ -70,7 +78,10 @@ export function AuthLayout({
               <div className="rounded-[28px] border border-white/10 bg-white/10 p-6 backdrop-blur-sm">
                 <div className="flex items-start gap-3">
                   <Quote className="mt-1 h-5 w-5 text-[#C9A84C]" />
-                  <p className="min-h-[96px] text-base leading-8 text-[#F5F0E8]/82 transition-all duration-500">
+                  <p
+                    className="min-h-[96px] text-base leading-8 text-[#F5F0E8]/82 transition-opacity duration-300"
+                    style={{ opacity: visible ? 1 : 0 }}
+                  >
                     {quotes[quoteIndex]}
                   </p>
                 </div>

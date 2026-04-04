@@ -184,17 +184,16 @@ export function AppShell() {
         </aside>
 
         <div className="flex min-h-screen flex-col">
-          <header className="sticky top-0 z-20 border-b border-[#d8ccbb] bg-[#F5F0E8]/90 px-4 py-4 backdrop-blur md:px-8 dark:border-white/10 dark:bg-[#102a20]/90">
-            <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
-              <div className="flex items-center gap-4">
-                <div className="rounded-2xl bg-[#0A3D2E] p-3 text-[#F5F0E8]">
-                  <Landmark className="h-5 w-5" />
+          <header className="sticky top-0 z-20 border-b border-[#d8ccbb] bg-[#F5F0E8]/90 px-4 py-3 backdrop-blur md:px-8 dark:border-white/10 dark:bg-[#102a20]/90">
+            <div className="flex items-center justify-between gap-4">
+              <div className="flex items-center gap-3 lg:hidden">
+                <div className="rounded-xl bg-[#0A3D2E] p-2 text-[#F5F0E8]">
+                  <Landmark className="h-4 w-4" />
                 </div>
-                <div>
-                  <p className="font-display text-xl font-semibold">PanAfrika Bank</p>
-                  <p className="text-sm text-muted-foreground">bank.portfolio.sonofnos.com</p>
-                </div>
+                <p className="font-display text-lg font-semibold">PanAfrika Bank</p>
               </div>
+
+              <div className="hidden lg:block" />
 
               <div className="flex flex-wrap items-center gap-3">
                 <Select

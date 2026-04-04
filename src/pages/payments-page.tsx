@@ -393,7 +393,7 @@ export function PaymentsPage() {
       <PageHeader
         eyebrow="Payments"
         title="Payments command center"
-        description="Route customer transfers, utilities, airtime, bulk disbursements, and SWIFT-style cross-border flows from one payments workspace."
+        description="Domestic transfers, bill payments, airtime, bulk disbursements, and SWIFT cross-border flows."
       />
 
       <div className="overflow-x-auto">

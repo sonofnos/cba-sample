@@ -278,10 +278,10 @@ export function LandingPage() {
               <p className="text-sm text-muted-foreground">bank.portfolio.sonofnos.com</p>
             </div>
             <div className="flex flex-col gap-2 text-sm text-muted-foreground md:items-end">
-              <a href="https://github.com/" target="_blank" rel="noreferrer" className="transition hover:text-primary">
-                GitHub placeholder
+              <a href="https://github.com/sonofnos/cba-sample" target="_blank" rel="noreferrer" className="transition hover:text-primary">
+                View source on GitHub
               </a>
-              <p>Built by Chris</p>
+              <p>Designed and built by <a href="https://sonofnos.com" target="_blank" rel="noreferrer" className="font-medium text-foreground transition hover:text-primary">sonofnos</a></p>
             </div>
           </div>
         </footer>

@@ -18,42 +18,47 @@ export function OperationsPage() {
     <div className="space-y-8">
       <PageHeader
         eyebrow="Operations"
-        title="Cross-functional command centre for market coverage, languages and exception queues"
-        description="This surface represents the kinds of operational overlays a real core banking command centre would use to coordinate branches, regulators and shared services."
+        title="Operational command centre"
+        description="Market coverage, active incidents, regulatory language mapping, and cross-branch exception queues."
       />
 
       <div className="grid gap-4 md:grid-cols-3">
-        <Card>
-          <CardHeader>
-            <CardTitle>Active markets</CardTitle>
-          </CardHeader>
-          <CardContent className="flex items-center gap-3 text-3xl font-display font-semibold">
-            <Globe className="h-6 w-6 text-primary" />
-            {(markets as Market[]).length}
+        <Card className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
+          <CardContent className="p-6">
+            <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Active markets</p>
+            <div className="mt-3 flex items-end justify-between gap-2">
+              <p className="font-display text-4xl font-semibold">{(markets as Market[]).length}</p>
+              <Globe className="mb-1 h-5 w-5 text-primary" />
+            </div>
+            <p className="mt-2 text-xs text-muted-foreground">West, East and Southern Africa</p>
           </CardContent>
         </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>Languages</CardTitle>
-          </CardHeader>
-          <CardContent className="flex items-center gap-3 text-3xl font-display font-semibold">
-            <Languages className="h-6 w-6 text-primary" />
-            2
+        <Card className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
+          <CardContent className="p-6">
+            <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Interface languages</p>
+            <div className="mt-3 flex items-end justify-between gap-2">
+              <p className="font-display text-4xl font-semibold">2</p>
+              <Languages className="mb-1 h-5 w-5 text-primary" />
+            </div>
+            <p className="mt-2 text-xs text-muted-foreground">English and French</p>
           </CardContent>
         </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>Live incidents</CardTitle>
-          </CardHeader>
-          <CardContent className="flex items-center gap-3 text-3xl font-display font-semibold">
-            <ShieldAlert className="h-6 w-6 text-primary" />
-            {incidentRows.filter((incident) => incident.status !== "Resolved").length}
+        <Card className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
+          <CardContent className="p-6">
+            <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Live incidents</p>
+            <div className="mt-3 flex items-end justify-between gap-2">
+              <p className="font-display text-4xl font-semibold">
+                {incidentRows.filter((incident) => incident.status !== "Resolved").length}
+              </p>
+              <ShieldAlert className="mb-1 h-5 w-5 text-primary" />
+            </div>
+            <p className="mt-2 text-xs text-muted-foreground">Unresolved across all queues</p>
           </CardContent>
         </Card>
       </div>
 
       <div className="grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
-        <Card>
+        <Card className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
           <CardHeader>
             <div>
               <CardTitle>{t("operations.timeline")}</CardTitle>
@@ -65,7 +70,7 @@ export function OperationsPage() {
               <div key={incident.id} className="rounded-2xl border border-border/60 p-4">
                 <div className="flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <div className="rounded-xl bg-surface-100 p-2 text-surface-700">
+                    <div className="rounded-xl bg-secondary p-2 text-muted-foreground">
                       <ActivitySquare className="h-4 w-4" />
                     </div>
                     <div>
@@ -87,7 +92,7 @@ export function OperationsPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
           <CardHeader>
             <div>
               <CardTitle>Market operating model</CardTitle>

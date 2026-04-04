@@ -126,7 +126,7 @@ export function CompliancePage() {
       <PageHeader
         eyebrow="Compliance"
         title="KYC, AML, sanctions, and regulatory reporting"
-        description="Operate the compliance office across onboarding review, transaction monitoring, sanctions screening, regulatory submissions, and audit visibility."
+        description="Onboarding review queues, transaction monitoring, sanctions screening, and audit trail in one workspace."
       />
 
       <div className="overflow-x-auto">

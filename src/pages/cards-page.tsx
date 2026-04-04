@@ -285,7 +285,7 @@ export function CardsPage() {
       <PageHeader
         eyebrow="Cards"
         title="Cards control center"
-        description="Manage physical and virtual cards, transaction controls, card issuance, and spend settings from one card-services workspace."
+        description="Physical and virtual card issuance, spend controls, limits, and lifecycle management."
       />
 
       <div className="overflow-x-auto">
