@@ -1,0 +1,1 @@
+import{p as r}from"./index-BgM3s5K6.js";import{b as o}from"./query-CUd_0rgl.js";const l=o()(r(a=>({locale:"en",market:"ALL",setLocale:e=>a({locale:e}),setMarket:e=>a({market:e})}),{name:"panafrika-cba",partialize:a=>({locale:a.locale,market:a.market})}));export{l as u};

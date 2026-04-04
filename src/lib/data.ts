@@ -1,0 +1,86 @@
+import type { BankDataset, Market } from "@/lib/types";
+
+export const markets: Market[] = [
+  { code: "NG", name: "Nigeria", region: "West Africa", regulator: "CBN", currency: "NGN", accent: "#008753", language: "en" },
+  { code: "GH", name: "Ghana", region: "West Africa", regulator: "BoG", currency: "GHS", accent: "#b61f3a", language: "en" },
+  { code: "KE", name: "Kenya", region: "East Africa", regulator: "CBK", currency: "KES", accent: "#7b2335", language: "en" },
+  { code: "ZA", name: "South Africa", region: "Southern Africa", regulator: "SARB", currency: "ZAR", accent: "#0b6272", language: "en" },
+  { code: "SN", name: "Senegal", region: "WAEMU", regulator: "BCEAO", currency: "XOF", accent: "#f2c94c", language: "fr" },
+  { code: "RW", name: "Rwanda", region: "East Africa", regulator: "NBR", currency: "RWF", accent: "#1f6feb", language: "en" },
+  { code: "ZM", name: "Zambia", region: "Southern Africa", regulator: "BoZ", currency: "ZMW", accent: "#19a974", language: "en" },
+];
+
+export const seedData: BankDataset = {
+  user: {
+    id: "usr-001",
+    name: "Amaka Okonkwo",
+    role: "Group Operations Director",
+    market: "NG",
+    team: "Core Banking Command Centre",
+  },
+  markets,
+  branches: [
+    { id: "br-ng-lag", market: "NG", name: "Victoria Island HQ", city: "Lagos", code: "NG001", customers: 4280 },
+    { id: "br-ng-abj", market: "NG", name: "Maitama Corporate", city: "Abuja", code: "NG014", customers: 1910 },
+    { id: "br-gh-acc", market: "GH", name: "Airport City", city: "Accra", code: "GH002", customers: 1360 },
+    { id: "br-ke-nbo", market: "KE", name: "Upper Hill", city: "Nairobi", code: "KE007", customers: 1488 },
+    { id: "br-za-jhb", market: "ZA", name: "Sandton Treasury Hub", city: "Johannesburg", code: "ZA004", customers: 1231 },
+    { id: "br-sn-dkr", market: "SN", name: "Plateau Dakar", city: "Dakar", code: "SN003", customers: 970 },
+    { id: "br-rw-kgl", market: "RW", name: "Kigali Heights", city: "Kigali", code: "RW001", customers: 720 },
+    { id: "br-zm-lsk", market: "ZM", name: "Cairo Road", city: "Lusaka", code: "ZM005", customers: 855 },
+  ],
+  customers: [
+    { id: "cus-1001", market: "NG", name: "Afrex Agro Exports Ltd", segment: "Corporate", riskScore: 28, kycStatus: "Verified", onboardingDate: "2025-02-14T08:00:00Z", relationshipManager: "Olu Adebayo", country: "Nigeria" },
+    { id: "cus-1002", market: "NG", name: "Adaobi Chukwu", segment: "Retail", riskScore: 11, kycStatus: "Verified", onboardingDate: "2024-11-02T10:30:00Z", relationshipManager: "Tola Abioye", country: "Nigeria" },
+    { id: "cus-1003", market: "GH", name: "Volta Foods PLC", segment: "Corporate", riskScore: 37, kycStatus: "Enhanced Review", onboardingDate: "2025-01-11T09:15:00Z", relationshipManager: "Efua Mensah", country: "Ghana" },
+    { id: "cus-1004", market: "KE", name: "Nairobi Mobility SACCO", segment: "SME", riskScore: 22, kycStatus: "Verified", onboardingDate: "2024-12-04T13:00:00Z", relationshipManager: "Akinyi Otieno", country: "Kenya" },
+    { id: "cus-1005", market: "ZA", name: "Ubuntu Mining Services", segment: "Corporate", riskScore: 34, kycStatus: "Pending", onboardingDate: "2025-03-08T07:20:00Z", relationshipManager: "Lerato Khumalo", country: "South Africa" },
+    { id: "cus-1006", market: "SN", name: "Sunu Retail Group", segment: "SME", riskScore: 18, kycStatus: "Verified", onboardingDate: "2024-10-17T14:45:00Z", relationshipManager: "Aissatou Ndiaye", country: "Senegal" },
+    { id: "cus-1007", market: "RW", name: "Kigali MedTech", segment: "SME", riskScore: 14, kycStatus: "Verified", onboardingDate: "2025-01-21T11:10:00Z", relationshipManager: "Claude Uwimana", country: "Rwanda" },
+    { id: "cus-1008", market: "ZM", name: "Copperbelt Logistics", segment: "Corporate", riskScore: 26, kycStatus: "Verified", onboardingDate: "2025-02-25T16:40:00Z", relationshipManager: "Mutale Phiri", country: "Zambia" },
+  ],
+  accounts: [
+    { id: "acc-001", customerId: "cus-1001", market: "NG", name: "Main Collection", type: "Current", currency: "NGN", balance: 182450000, availableBalance: 180920000, status: "Active", branchId: "br-ng-lag", ibanLike: "PAFBNG00100018245" },
+    { id: "acc-002", customerId: "cus-1002", market: "NG", name: "Premier Savings", type: "Savings", currency: "NGN", balance: 4680000, availableBalance: 4654000, status: "Active", branchId: "br-ng-abj", ibanLike: "PAFBNG01400004680" },
+    { id: "acc-003", customerId: "cus-1003", market: "GH", name: "Trade Settlement", type: "Current", currency: "GHS", balance: 7240000, availableBalance: 6990000, status: "Watchlist", branchId: "br-gh-acc", ibanLike: "PAFBGH00200072400" },
+    { id: "acc-004", customerId: "cus-1004", market: "KE", name: "Working Capital", type: "Current", currency: "KES", balance: 193500000, availableBalance: 191300000, status: "Active", branchId: "br-ke-nbo", ibanLike: "PAFBKE00700193500" },
+    { id: "acc-005", customerId: "cus-1005", market: "ZA", name: "Operating Account", type: "Current", currency: "ZAR", balance: 28800000, availableBalance: 28550000, status: "Dormant", branchId: "br-za-jhb", ibanLike: "PAFBZA00400028800" },
+    { id: "acc-006", customerId: "cus-1006", market: "SN", name: "Compte Principal", type: "Current", currency: "XOF", balance: 421000000, availableBalance: 412000000, status: "Active", branchId: "br-sn-dkr", ibanLike: "PAFBSN00300421000" },
+    { id: "acc-007", customerId: "cus-1007", market: "RW", name: "Growth Wallet", type: "Savings", currency: "RWF", balance: 982000000, availableBalance: 981800000, status: "Active", branchId: "br-rw-kgl", ibanLike: "PAFBRW00100982000" },
+    { id: "acc-008", customerId: "cus-1008", market: "ZM", name: "Treasury Float", type: "Treasury", currency: "USD", balance: 1960000, availableBalance: 1960000, status: "Active", branchId: "br-zm-lsk", ibanLike: "PAFBZM00500001960" },
+  ],
+  payments: [
+    { id: "pay-001", market: "NG", customerId: "cus-1001", debitAccountId: "acc-001", creditAccount: "0012334455", beneficiary: "Lagos Port Services", amount: 18500000, currency: "NGN", corridor: "Domestic NGN", rail: "RTGS", status: "Completed", initiatedAt: "2026-04-04T07:45:00Z", narrative: "Import clearing fees" },
+    { id: "pay-002", market: "NG", customerId: "cus-1002", debitAccountId: "acc-002", creditAccount: "0701019911", beneficiary: "Nora Telecom", amount: 245000, currency: "NGN", corridor: "Domestic NGN", rail: "Instant", status: "Completed", initiatedAt: "2026-04-04T09:10:00Z", narrative: "Vendor settlement" },
+    { id: "pay-003", market: "GH", customerId: "cus-1003", debitAccountId: "acc-003", creditAccount: "GH55AB123990", beneficiary: "Tema Cold Stores", amount: 780000, currency: "GHS", corridor: "Domestic GHS", rail: "ACH", status: "Flagged", initiatedAt: "2026-04-04T08:25:00Z", narrative: "Bulk supplier payout" },
+    { id: "pay-004", market: "KE", customerId: "cus-1004", debitAccountId: "acc-004", creditAccount: "KE9912443", beneficiary: "Metro Fleet Leasing", amount: 12000000, currency: "KES", corridor: "Regional EAPS", rail: "RTGS", status: "Pending", initiatedAt: "2026-04-04T06:40:00Z", narrative: "Vehicle financing settlement" },
+    { id: "pay-005", market: "SN", customerId: "cus-1006", debitAccountId: "acc-006", creditAccount: "SN003991001", beneficiary: "Dakar Customs", amount: 54000000, currency: "XOF", corridor: "WAEMU", rail: "RTGS", status: "Completed", initiatedAt: "2026-04-04T05:55:00Z", narrative: "Clearing duties" },
+  ],
+  loans: [
+    { id: "loan-001", market: "NG", customerId: "cus-1001", product: "Trade Finance Line", amount: 850000000, currency: "NGN", status: "Disbursed", sector: "Agribusiness", tenorMonths: 12, stage: "Stage 1", approvalRatio: 92 },
+    { id: "loan-002", market: "GH", customerId: "cus-1003", product: "Invoice Discounting", amount: 6200000, currency: "GHS", status: "Review", sector: "Manufacturing", tenorMonths: 9, stage: "Stage 2", approvalRatio: 58 },
+    { id: "loan-003", market: "KE", customerId: "cus-1004", product: "SME Fleet Expansion", amount: 42000000, currency: "KES", status: "Approved", sector: "Transport", tenorMonths: 24, stage: "Stage 1", approvalRatio: 81 },
+    { id: "loan-004", market: "ZA", customerId: "cus-1005", product: "Capex Facility", amount: 13000000, currency: "ZAR", status: "Review", sector: "Mining Services", tenorMonths: 18, stage: "Stage 2", approvalRatio: 63 },
+    { id: "loan-005", market: "RW", customerId: "cus-1007", product: "Healthcare Equipment", amount: 370000000, currency: "RWF", status: "Disbursed", sector: "Healthtech", tenorMonths: 30, stage: "Stage 1", approvalRatio: 89 },
+  ],
+  alerts: [
+    { id: "alt-001", market: "GH", customerId: "cus-1003", severity: "High", scenario: "Velocity spike on supplier payouts", regulator: "BoG", status: "Investigating", openedAt: "2026-04-04T08:30:00Z" },
+    { id: "alt-002", market: "ZA", customerId: "cus-1005", severity: "Medium", scenario: "Dormant account reactivation", regulator: "SARB", status: "Open", openedAt: "2026-04-04T07:15:00Z" },
+    { id: "alt-003", market: "NG", customerId: "cus-1001", severity: "Low", scenario: "Cross-border threshold monitoring", regulator: "CBN", status: "Open", openedAt: "2026-04-04T06:20:00Z" },
+    { id: "alt-004", market: "SN", customerId: "cus-1006", severity: "Medium", scenario: "Large cash equivalent movement", regulator: "BCEAO", status: "Cleared", openedAt: "2026-04-03T15:55:00Z" },
+  ],
+  treasury: [
+    { id: "tr-001", market: "NG", currency: "NGN", nostroBalance: 3860000000, intradayLimit: 5000000000, utilization: 77, rateToUsd: 1498.2, dailyChange: 0.4 },
+    { id: "tr-002", market: "GH", currency: "GHS", nostroBalance: 185000000, intradayLimit: 250000000, utilization: 74, rateToUsd: 14.7, dailyChange: -0.2 },
+    { id: "tr-003", market: "KE", currency: "KES", nostroBalance: 2960000000, intradayLimit: 3500000000, utilization: 69, rateToUsd: 129.8, dailyChange: 0.1 },
+    { id: "tr-004", market: "ZA", currency: "ZAR", nostroBalance: 640000000, intradayLimit: 900000000, utilization: 71, rateToUsd: 18.5, dailyChange: 0.6 },
+    { id: "tr-005", market: "SN", currency: "XOF", nostroBalance: 1200000000, intradayLimit: 1800000000, utilization: 67, rateToUsd: 604.9, dailyChange: 0.1 },
+    { id: "tr-006", market: "RW", currency: "RWF", nostroBalance: 2400000000, intradayLimit: 3000000000, utilization: 80, rateToUsd: 1286.4, dailyChange: 0.3 },
+    { id: "tr-007", market: "ZM", currency: "ZMW", nostroBalance: 88000000, intradayLimit: 150000000, utilization: 59, rateToUsd: 26.2, dailyChange: -0.1 },
+  ],
+  incidents: [
+    { id: "ops-001", market: "NG", title: "Branch cash position sync lag", queue: "Channels", priority: "P2", status: "Monitoring", updatedAt: "2026-04-04T09:05:00Z" },
+    { id: "ops-002", market: "KE", title: "Outbound RTGS retry backlog", queue: "Payments", priority: "P1", status: "Open", updatedAt: "2026-04-04T08:40:00Z" },
+    { id: "ops-003", market: "ZA", title: "KYC document OCR drift", queue: "Onboarding", priority: "P3", status: "Resolved", updatedAt: "2026-04-04T07:30:00Z" },
+  ],
+};

@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 32 38% 93%;
+  --foreground: 161 72% 14%;
+  --card: 30 33% 97%;
+  --card-foreground: 161 72% 14%;
+  --primary: 161 72% 14%;
+  --primary-foreground: 32 38% 93%;
+  --secondary: 42 42% 86%;
+  --secondary-foreground: 161 72% 14%;
+  --muted: 38 25% 89%;
+  --muted-foreground: 155 21% 32%;
+  --accent: 44 52% 54%;
+  --accent-foreground: 161 72% 14%;
+  --border: 34 24% 80%;
+  --input: 34 24% 80%;
+  --ring: 161 72% 14%;
+}
+
+.dark {
+  --background: 161 63% 10%;
+  --foreground: 34 33% 92%;
+  --card: 159 47% 13%;
+  --card-foreground: 34 33% 92%;
+  --primary: 44 52% 54%;
+  --primary-foreground: 161 63% 10%;
+  --secondary: 157 32% 19%;
+  --secondary-foreground: 34 33% 92%;
+  --muted: 158 24% 18%;
+  --muted-foreground: 37 16% 72%;
+  --accent: 18 49% 53%;
+  --accent-foreground: 34 33% 92%;
+  --border: 157 22% 24%;
+  --input: 157 22% 24%;
+  --ring: 44 52% 54%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-foreground font-sans antialiased transition-colors duration-300;
+  background-image:
+    radial-gradient(circle at top left, rgba(10, 61, 46, 0.14), transparent 26%),
+    radial-gradient(circle at top right, rgba(201, 168, 76, 0.22), transparent 24%),
+    linear-gradient(to bottom, #f5f0e8, #efe8dd);
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+.dark body {
+  background-image:
+    radial-gradient(circle at top left, rgba(201, 168, 76, 0.14), transparent 18%),
+    radial-gradient(circle at top right, rgba(196, 110, 74, 0.16), transparent 22%),
+    linear-gradient(to bottom, #0a241d, #102f25);
+}
+
+.africa-pulse {
+  animation: africa-pulse 2.8s ease-out infinite;
+  transform-origin: center;
+}
+
+.africa-float {
+  animation: africa-float 7s ease-in-out infinite;
+}
+
+.network-flow {
+  stroke-dasharray: 10 12;
+  animation: network-flow 9s linear infinite;
+}
+
+.fx-marquee {
+  display: inline-block;
+  min-width: 200%;
+  animation: fx-marquee 24s linear infinite;
+}
+
+.counter-glow {
+  position: relative;
+}
+
+.counter-glow::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.28), rgba(196, 110, 74, 0.08));
+  opacity: 0;
+  z-index: -1;
+  animation: counter-glow 3.6s ease-in-out infinite;
+}
+
+.success-checkmark {
+  animation: success-pop 0.7s ease-out both;
+}
+
+.card-3d {
+  perspective: 1200px;
+}
+
+.card-3d-inner {
+  transform-style: preserve-3d;
+}
+
+.card-3d:hover .card-3d-inner,
+.card-3d-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-3d-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.card-3d-face:last-child {
+  transform: rotateY(180deg);
+}
+
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  .receipt-print-area,
+  .receipt-print-area * {
+    visibility: visible !important;
+  }
+
+  .receipt-print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: #fff;
+    color: #000;
+    padding: 24px;
+  }
+
+  .receipt-print-hide {
+    display: none !important;
+  }
+}
+
+@keyframes africa-pulse {
+  0% {
+    opacity: 0.95;
+    transform: scale(0.55);
+  }
+  80% {
+    opacity: 0;
+    transform: scale(1.9);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+@keyframes africa-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes network-flow {
+  to {
+    stroke-dashoffset: -140;
+  }
+}
+
+@keyframes fx-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes counter-glow {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes success-pop {
+  0% {
+    transform: scale(0.65);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(17, 38, 31, 0.18);
+  border-radius: 999px;
+}

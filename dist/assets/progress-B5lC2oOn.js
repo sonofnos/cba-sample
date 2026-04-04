@@ -1,0 +1,1 @@
+import{j as r}from"./query-CUd_0rgl.js";import{c as e}from"./utils-CAuVbk1Z.js";function a({value:s,className:l}){return r.jsx("div",{className:e("h-2 w-full overflow-hidden rounded-full bg-surface-100",l),children:r.jsx("div",{className:"h-full rounded-full bg-primary transition-all",style:{width:`${Math.min(s,100)}%`}})})}export{a as P};
