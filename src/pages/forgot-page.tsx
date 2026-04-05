@@ -51,7 +51,7 @@ export function ForgotPage() {
 
         {submitted ? (
           <div className="rounded-[28px] border border-primary/10 bg-secondary/30 p-5 text-sm text-muted-foreground">
-            Password reset instructions have been simulated successfully. Check your inbox for the PanAfrika Bank recovery message.
+            Reset instructions sent. Check your inbox for a message from PanAfrika Bank — it may take a minute to arrive.
           </div>
         ) : null}
 

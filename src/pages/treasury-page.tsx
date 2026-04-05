@@ -17,11 +17,11 @@ export function TreasuryPage() {
     <div className="space-y-8">
       <PageHeader
         eyebrow="Treasury"
-        title="Monitor intraday positions, nostro balances and FX translation exposure"
-        description="The treasury layer aggregates currency books across markets and highlights intraday utilization against operating limits."
+        title="Intraday positions and nostro balances"
+        description="Currency utilization against operating limits across all active treasury books."
       />
 
-      <Card>
+      <Card className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
         <CardHeader>
           <div>
             <CardTitle>Utilization by currency book</CardTitle>
@@ -35,7 +35,7 @@ export function TreasuryPage() {
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {rows.map((position) => (
-          <Card key={position.id}>
+          <Card key={position.id} className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
             <CardHeader>
               <div>
                 <CardTitle>{position.currency}</CardTitle>

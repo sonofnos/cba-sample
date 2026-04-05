@@ -83,7 +83,7 @@ export function MfaPage() {
       <form className="mt-6 space-y-5" onSubmit={handleSubmit(onSubmit)}>
         <div className="space-y-2">
           <label htmlFor="code" className="text-sm font-medium">Enter OTP</label>
-          <Input id="code" inputMode="numeric" maxLength={6} placeholder="123456" {...register("code")} />
+          <Input id="code" inputMode="numeric" maxLength={6} placeholder="······" {...register("code")} />
           {errors.code ? <p className="text-sm text-danger">{errors.code.message}</p> : null}
         </div>
 

@@ -270,7 +270,8 @@ function TellerDashboard() {
     );
   }, [query]);
 
-  const todayCount = transactions.filter((t) => t.date === "2026-04-04").length;
+  const today = new Date().toISOString().slice(0, 10);
+  const todayCount = transactions.filter((t) => t.date === today).length || transactions.length;
 
   return (
     <div className="space-y-8">

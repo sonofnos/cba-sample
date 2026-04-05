@@ -179,7 +179,7 @@ export function OpenBankingPage({ embedded = false }: { embedded?: boolean }) {
         <PageHeader
           eyebrow="Open Banking"
           title="Developer portal and API sandbox"
-          description="Explore PanAfrika Open Banking APIs, authorize sandbox credentials, and test live MSW-backed endpoints in-browser."
+          description="Explore PanAfrika Open Banking APIs, authorize sandbox credentials, and test endpoints interactively in-browser."
         />
       ) : (
         <PageHeader
@@ -189,7 +189,7 @@ export function OpenBankingPage({ embedded = false }: { embedded?: boolean }) {
           action={
             <Link
               to="/login"
-              className="inline-flex items-center justify-center rounded-full border border-border bg-white px-4 py-2 text-sm font-medium transition hover:bg-surface-50"
+              className="inline-flex items-center justify-center rounded-full border border-border bg-white px-4 py-2 text-sm font-medium transition hover:bg-secondary dark:bg-white/5 dark:hover:bg-white/10"
             >
               Launch Core App
             </Link>
