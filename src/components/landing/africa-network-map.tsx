@@ -58,13 +58,13 @@ const ALL_COUNTRIES: { code: string; name: string; d: string }[] = [
 const MARKET_CODES = new Set(["ng", "gh", "sn", "ke", "rw", "zm", "za"]);
 
 const MARKETS = [
-  { id: "ng", name: "Nigeria",      cx: 270, cy: 270, color: "#008753", countryCode: "ng" },
-  { id: "gh", name: "Ghana",        cx: 220, cy: 265, color: "#b61f3a", countryCode: "gh" },
-  { id: "sn", name: "Senegal",      cx: 165, cy: 235, color: "#f2c94c", countryCode: "sn" },
-  { id: "ke", name: "Kenya",        cx: 400, cy: 300, color: "#7b2335", countryCode: "ke" },
-  { id: "rw", name: "Rwanda",       cx: 372, cy: 315, color: "#1f6feb", countryCode: "rw" },
-  { id: "zm", name: "Zambia",       cx: 340, cy: 370, color: "#19a974", countryCode: "zm" },
-  { id: "za", name: "South Africa", cx: 340, cy: 440, color: "#0b6272", countryCode: "za" },
+  { id: "ng", name: "Nigeria",      cx: 262, cy: 253, color: "#008753", countryCode: "ng" },
+  { id: "gh", name: "Ghana",        cx: 213, cy: 259, color: "#b61f3a", countryCode: "gh" },
+  { id: "sn", name: "Senegal",      cx: 153, cy: 225, color: "#f2c94c", countryCode: "sn" },
+  { id: "ke", name: "Kenya",        cx: 411, cy: 298, color: "#7b2335", countryCode: "ke" },
+  { id: "rw", name: "Rwanda",       cx: 372, cy: 310, color: "#1f6feb", countryCode: "rw" },
+  { id: "zm", name: "Zambia",       cx: 360, cy: 368, color: "#19a974", countryCode: "zm" },
+  { id: "za", name: "South Africa", cx: 340, cy: 466, color: "#0b6272", countryCode: "za" },
 ];
 
 // Build a lookup of market colors for rendering highlighted countries
@@ -73,19 +73,19 @@ for (const m of MARKETS) MARKET_BY_CODE[m.countryCode] = m;
 
 const ROUTES = [
   // Senegal → Ghana
-  "M165 235 C185 248 202 258 220 265",
+  "M153 225 C172 238 194 252 213 259",
   // Ghana → Nigeria
-  "M220 265 C238 265 254 267 270 270",
+  "M213 259 C232 257 248 254 262 253",
   // Nigeria → Kenya (arc through Central Africa)
-  "M270 270 C310 258 355 268 400 300",
+  "M262 253 C308 248 362 265 411 298",
   // Kenya → Rwanda
-  "M400 300 C392 305 382 310 372 315",
+  "M411 298 C400 302 386 306 372 310",
   // Rwanda → Zambia
-  "M372 315 C362 335 352 354 340 370",
+  "M372 310 C368 330 364 350 360 368",
   // Zambia → South Africa
-  "M340 370 C340 396 340 418 340 440",
+  "M360 368 C355 400 348 432 340 466",
   // Nigeria → Rwanda (direct link)
-  "M270 270 C300 285 334 300 372 315",
+  "M262 253 C298 272 336 293 372 310",
 ];
 
 export function AfricaNetworkMap() {
