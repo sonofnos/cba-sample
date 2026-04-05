@@ -158,21 +158,6 @@ export function AfricaNetworkMap() {
         {/* Market dots with pulse rings and labels */}
         {MARKETS.map((m) => (
           <g key={m.id} transform={`translate(${m.cx} ${m.cy})`} filter="url(#dot-glow-600)">
-            <circle
-              className="africa-pulse"
-              cx="0"
-              cy="0"
-              r="12"
-              fill={`${m.color}30`}
-            />
-            <circle
-              className="africa-pulse"
-              cx="0"
-              cy="0"
-              r="7"
-              fill={`${m.color}40`}
-              style={{ animationDelay: "0.9s" }}
-            />
             <circle cx="0" cy="0" r="4" fill={m.color} />
             <circle cx="0" cy="0" r="1.8" fill="#F5F0E8" />
             <text
