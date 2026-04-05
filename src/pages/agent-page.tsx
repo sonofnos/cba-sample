@@ -143,7 +143,7 @@ function useAgentModule() {
 function SectionHeading({ title, description }: { title: string; description: string }) {
   return (
     <div className="space-y-1">
-      <h2 className="font-display text-2xl font-semibold">{title}</h2>
+      <h2 className="font-display text-2xl ">{title}</h2>
       <p className="text-sm text-muted-foreground">{description}</p>
     </div>
   );
@@ -262,7 +262,7 @@ export function AgentPage() {
         <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
           <CardContent className="p-8">
             <Badge tone="warning">Restricted</Badge>
-            <p className="mt-4 font-display text-3xl font-semibold">
+            <p className="mt-4 font-display text-3xl ">
               Agent dashboard, terminal, float controls, and network visibility are not available to your role.
             </p>
           </CardContent>
@@ -351,19 +351,19 @@ export function AgentDashboardPage() {
           <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
             <CardContent className="p-6">
               <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Transactions</p>
-              <p className="mt-3 font-display text-4xl font-semibold">{transactionsToday}</p>
+              <p className="mt-3 font-display text-4xl ">{transactionsToday}</p>
             </CardContent>
           </Card>
           <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
             <CardContent className="p-6">
               <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Volume</p>
-              <p className="mt-3 font-display text-4xl font-semibold">{formatMoney(volumeToday)}</p>
+              <p className="mt-3 font-display text-4xl ">{formatMoney(volumeToday)}</p>
             </CardContent>
           </Card>
           <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
             <CardContent className="p-6">
               <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Commission</p>
-              <p className="mt-3 font-display text-4xl font-semibold">{formatMoney(commissionToday)}</p>
+              <p className="mt-3 font-display text-4xl ">{formatMoney(commissionToday)}</p>
             </CardContent>
           </Card>
           <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5 md:col-span-3">
@@ -786,11 +786,11 @@ export function AgentFloatPage() {
             <div className="grid gap-4 md:grid-cols-2">
               <div className="rounded-[24px] bg-[#0A3D2E] p-5 text-[#F5F0E8]">
                 <p className="text-xs uppercase tracking-[0.18em] text-[#C9A84C]">Current float balance</p>
-                <p className="mt-3 font-display text-4xl font-semibold">{formatMoney(currentFloat)}</p>
+                <p className="mt-3 font-display text-4xl ">{formatMoney(currentFloat)}</p>
               </div>
               <div className="rounded-[24px] border border-border/70 bg-secondary/20 p-5">
                 <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Float utilization</p>
-                <p className="mt-3 font-display text-4xl font-semibold">{utilization}%</p>
+                <p className="mt-3 font-display text-4xl ">{utilization}%</p>
               </div>
             </div>
 
@@ -907,25 +907,25 @@ export function AgentNetworkPage() {
         <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Total agents</p>
-            <p className="mt-3 font-display text-4xl font-semibold">{filteredAgents.length}</p>
+            <p className="mt-3 font-display text-4xl ">{filteredAgents.length}</p>
           </CardContent>
         </Card>
         <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Active now</p>
-            <p className="mt-3 font-display text-4xl font-semibold">{activeNow}</p>
+            <p className="mt-3 font-display text-4xl ">{activeNow}</p>
           </CardContent>
         </Card>
         <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Total network float</p>
-            <p className="mt-3 font-display text-4xl font-semibold">{formatMoney(totalFloat)}</p>
+            <p className="mt-3 font-display text-4xl ">{formatMoney(totalFloat)}</p>
           </CardContent>
         </Card>
         <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Markets shown</p>
-            <p className="mt-3 font-display text-4xl font-semibold">{market === "all" ? 3 : 1}</p>
+            <p className="mt-3 font-display text-4xl ">{market === "all" ? 3 : 1}</p>
           </CardContent>
         </Card>
       </div>
@@ -1010,7 +1010,7 @@ export function AgentNetworkPage() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between gap-3">
                     <div>
-                      <p className="font-display text-2xl font-semibold">{selectedAgent.name}</p>
+                      <p className="font-display text-2xl ">{selectedAgent.name}</p>
                       <p className="mt-1 text-sm text-muted-foreground">{selectedAgent.code}</p>
                     </div>
                     <Badge tone={getStatusTone(selectedAgent.status)}>{selectedAgent.status}</Badge>

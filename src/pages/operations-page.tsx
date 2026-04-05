@@ -27,7 +27,7 @@ export function OperationsPage() {
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Active markets</p>
             <div className="mt-3 flex items-end justify-between gap-2">
-              <p className="font-display text-4xl font-semibold">{(markets as Market[]).length}</p>
+              <p className="font-display text-4xl ">{(markets as Market[]).length}</p>
               <Globe className="mb-1 h-5 w-5 text-primary" />
             </div>
             <p className="mt-2 text-xs text-muted-foreground">West, East and Southern Africa</p>
@@ -37,7 +37,7 @@ export function OperationsPage() {
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Interface languages</p>
             <div className="mt-3 flex items-end justify-between gap-2">
-              <p className="font-display text-4xl font-semibold">2</p>
+              <p className="font-display text-4xl ">2</p>
               <Languages className="mb-1 h-5 w-5 text-primary" />
             </div>
             <p className="mt-2 text-xs text-muted-foreground">English and French</p>
@@ -47,7 +47,7 @@ export function OperationsPage() {
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Live incidents</p>
             <div className="mt-3 flex items-end justify-between gap-2">
-              <p className="font-display text-4xl font-semibold">
+              <p className="font-display text-4xl ">
                 {incidentRows.filter((incident) => incident.status !== "Resolved").length}
               </p>
               <ShieldAlert className="mb-1 h-5 w-5 text-primary" />

@@ -68,14 +68,14 @@ export function CustomersPage() {
         <Card className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Total relationships</p>
-            <p className="mt-3 font-display text-4xl font-semibold">{rows.length}</p>
+            <p className="mt-3 font-display text-4xl ">{rows.length}</p>
             <p className="mt-2 text-xs text-muted-foreground">Retail, SME and corporate</p>
           </CardContent>
         </Card>
         <Card className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Enhanced review</p>
-            <p className="mt-3 font-display text-4xl font-semibold">
+            <p className="mt-3 font-display text-4xl ">
               {rows.filter((row) => row.kycStatus === "Enhanced Review").length}
             </p>
             <p className="mt-2 text-xs text-muted-foreground">EDD in progress</p>
@@ -84,7 +84,7 @@ export function CustomersPage() {
         <Card className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Corporate concentration</p>
-            <p className="mt-3 font-display text-4xl font-semibold">
+            <p className="mt-3 font-display text-4xl ">
               {rows.filter((row) => row.segment === "Corporate").length}
             </p>
             <p className="mt-2 text-xs text-muted-foreground">Of total relationship count</p>

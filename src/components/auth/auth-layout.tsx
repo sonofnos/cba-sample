@@ -55,7 +55,7 @@ export function AuthLayout({
                   <Landmark className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-display text-xl font-semibold">PanAfrika Bank</p>
+                  <p className="font-display text-xl ">PanAfrika Bank</p>
                   <p className="text-xs text-[#F5F0E8]/70">bank.portfolio.sonofnos.com</p>
                 </div>
               </Link>
@@ -64,7 +64,7 @@ export function AuthLayout({
                 <p className="inline-flex rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.22em] text-[#C9A84C]">
                   Auth module
                 </p>
-                <h1 className="max-w-xl font-display text-4xl font-semibold leading-tight md:text-6xl">
+                <h1 className="max-w-xl font-display text-4xl leading-[1.1] md:text-6xl">
                   Secure access into a continent-scale banking emulator
                 </h1>
                 <p className="max-w-lg text-sm leading-8 text-[#F5F0E8]/74 md:text-base">
@@ -89,15 +89,15 @@ export function AuthLayout({
               <div className="grid gap-4 sm:grid-cols-3">
                 <div className="rounded-2xl bg-black/15 p-4">
                   <p className="text-xs uppercase tracking-[0.18em] text-[#F5F0E8]/55">Markets</p>
-                  <p className="mt-2 font-display text-3xl font-semibold">7</p>
+                  <p className="mt-2 font-display text-3xl ">7</p>
                 </div>
                 <div className="rounded-2xl bg-black/15 p-4">
                   <p className="text-xs uppercase tracking-[0.18em] text-[#F5F0E8]/55">Roles</p>
-                  <p className="mt-2 font-display text-3xl font-semibold">4</p>
+                  <p className="mt-2 font-display text-3xl ">4</p>
                 </div>
                 <div className="rounded-2xl bg-black/15 p-4">
                   <p className="text-xs uppercase tracking-[0.18em] text-[#F5F0E8]/55">MFA</p>
-                  <p className="mt-2 font-display text-3xl font-semibold">OTP</p>
+                  <p className="mt-2 font-display text-3xl ">OTP</p>
                 </div>
               </div>
             </div>
@@ -108,7 +108,7 @@ export function AuthLayout({
           <div className="w-full rounded-[36px] border border-white/60 bg-white/82 p-6 shadow-panel backdrop-blur md:p-10 dark:border-white/10 dark:bg-white/5">
             <div className="mb-8 space-y-3">
               <p className="text-sm uppercase tracking-[0.18em] text-muted-foreground">Authentication</p>
-              <h2 className="font-display text-4xl font-semibold">{title}</h2>
+              <h2 className="font-display text-4xl ">{title}</h2>
               <p className="max-w-xl text-sm leading-7 text-muted-foreground">{subtitle}</p>
             </div>
             {children}

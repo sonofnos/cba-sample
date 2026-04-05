@@ -67,7 +67,7 @@ function KpiCard({
       <CardContent className="p-6">
         <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{label}</p>
         <div className="mt-3 flex items-end justify-between gap-2">
-          <p className="font-display text-4xl font-semibold leading-none">{value}</p>
+          <p className="font-display text-4xl  leading-none">{value}</p>
           {trend === "up" && <TrendingUp className="mb-1 h-4 w-4 text-emerald-600" />}
           {trend === "down" && <TrendingDown className="mb-1 h-4 w-4 text-orange-600" />}
         </div>
@@ -85,7 +85,7 @@ function CustomerDashboard() {
     <div className="space-y-8">
       <div className="space-y-2">
         <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Customer dashboard</p>
-        <h1 className="font-display text-4xl font-semibold">Your banking control center</h1>
+        <h1 className="font-display text-4xl ">Your banking control center</h1>
         <p className="max-w-3xl text-sm leading-7 text-muted-foreground">
           Balances, recent activity, quick actions, and live FX rates in one surface.
         </p>
@@ -98,7 +98,7 @@ function CustomerDashboard() {
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <CardTitle className="text-2xl">{account.type}</CardTitle>
-                  <CardDescription className="mt-2">
+                  <CardDescription className="mt-2 font-mono tracking-widest">
                     {maskAccountNumber(account.accountNumber)}
                   </CardDescription>
                 </div>
@@ -110,7 +110,7 @@ function CustomerDashboard() {
             <CardContent className="space-y-5">
               <div>
                 <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Available balance</p>
-                <p className="mt-2 font-display text-4xl font-semibold">
+                <p className="mt-2 font-display text-4xl ">
                   {formatCurrency(account.balance, account.currency, "en")}
                 </p>
               </div>
@@ -277,7 +277,7 @@ function TellerDashboard() {
     <div className="space-y-8">
       <div className="space-y-2">
         <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Teller dashboard</p>
-        <h1 className="font-display text-4xl font-semibold">Branch operations</h1>
+        <h1 className="font-display text-4xl ">Branch operations</h1>
         <p className="max-w-3xl text-sm leading-7 text-muted-foreground">
           Search customers, monitor today&apos;s transaction load, and access cash handling shortcuts.
         </p>
@@ -337,7 +337,7 @@ function TellerDashboard() {
                 <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
                   <div>
                     <p className="font-medium">{customer.fullName}</p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="font-mono text-xs tracking-wider text-muted-foreground">
                       {customer.accountNumber} · BVN {customer.bvn}
                     </p>
                   </div>
@@ -360,7 +360,7 @@ function ComplianceDashboard() {
     <div className="space-y-8">
       <div className="space-y-2">
         <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Compliance dashboard</p>
-        <h1 className="font-display text-4xl font-semibold">KYC and surveillance workbench</h1>
+        <h1 className="font-display text-4xl ">KYC and surveillance workbench</h1>
         <p className="max-w-3xl text-sm leading-7 text-muted-foreground">
           Active review queues, escalated AML flags, and screening workloads across all markets.
         </p>
@@ -410,7 +410,7 @@ function ComplianceDashboard() {
         <Card className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">KYC approval rate</p>
-            <p className="mt-3 font-display text-4xl font-semibold">87.4%</p>
+            <p className="mt-3 font-display text-4xl ">87.4%</p>
             <p className="mt-2 text-xs text-muted-foreground">Last 30 days · 214 cases reviewed</p>
             <div className="mt-4 h-2 overflow-hidden rounded-full bg-secondary">
               <div className="h-full w-[87%] rounded-full bg-emerald-500" />
@@ -420,7 +420,7 @@ function ComplianceDashboard() {
         <Card className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Avg. review time</p>
-            <p className="mt-3 font-display text-4xl font-semibold">2.4 hrs</p>
+            <p className="mt-3 font-display text-4xl ">2.4 hrs</p>
             <p className="mt-2 text-xs text-muted-foreground">SLA target: 4 hrs · On track</p>
             <div className="mt-4 h-2 overflow-hidden rounded-full bg-secondary">
               <div className="h-full w-[60%] rounded-full bg-primary" />
@@ -437,7 +437,7 @@ function AdminDashboard() {
     <div className="space-y-8">
       <div className="space-y-2">
         <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Admin dashboard</p>
-        <h1 className="font-display text-4xl font-semibold">Platform oversight and controls</h1>
+        <h1 className="font-display text-4xl ">Platform oversight and controls</h1>
         <p className="max-w-3xl text-sm leading-7 text-muted-foreground">
           System health, user activity, audit coverage, and compliance exceptions across the group.
         </p>
@@ -506,21 +506,21 @@ function AdminDashboard() {
         <Card className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Pending approvals</p>
-            <p className="mt-3 font-display text-4xl font-semibold">7</p>
+            <p className="mt-3 font-display text-4xl ">7</p>
             <p className="mt-2 text-xs text-muted-foreground">Limit overrides, role changes</p>
           </CardContent>
         </Card>
         <Card className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Locked accounts</p>
-            <p className="mt-3 font-display text-4xl font-semibold">3</p>
+            <p className="mt-3 font-display text-4xl ">3</p>
             <p className="mt-2 text-xs text-muted-foreground">Failed auth threshold reached</p>
           </CardContent>
         </Card>
         <Card className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">API calls (24h)</p>
-            <p className="mt-3 font-display text-4xl font-semibold">48.2k</p>
+            <p className="mt-3 font-display text-4xl ">48.2k</p>
             <p className="mt-2 text-xs text-muted-foreground">0.02% error rate</p>
           </CardContent>
         </Card>

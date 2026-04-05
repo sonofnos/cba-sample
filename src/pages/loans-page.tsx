@@ -80,7 +80,7 @@ function formatMoney(value: number, currency: string, locale: string) {
 function SectionHeading({ title, description }: { title: string; description: string }) {
   return (
     <div className="space-y-1">
-      <h2 className="font-display text-2xl font-semibold">{title}</h2>
+      <h2 className="font-display text-2xl ">{title}</h2>
       <p className="text-sm text-muted-foreground">{description}</p>
     </div>
   );
@@ -229,7 +229,7 @@ function CalculatorPanel({
           <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
             <CardContent className="p-6">
               <Badge tone="positive">Monthly repayment</Badge>
-              <p className="mt-4 font-display text-3xl font-semibold">
+              <p className="mt-4 font-display text-3xl ">
                 {formatMoney(calculation.monthlyRepayment, product.currency, locale)}
               </p>
             </CardContent>
@@ -237,7 +237,7 @@ function CalculatorPanel({
           <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
             <CardContent className="p-6">
               <Badge tone="warning">Total interest</Badge>
-              <p className="mt-4 font-display text-3xl font-semibold">
+              <p className="mt-4 font-display text-3xl ">
                 {formatMoney(calculation.totalInterest, product.currency, locale)}
               </p>
             </CardContent>
@@ -245,7 +245,7 @@ function CalculatorPanel({
           <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
             <CardContent className="p-6">
               <Badge tone="info">Total repayment</Badge>
-              <p className="mt-4 font-display text-3xl font-semibold">
+              <p className="mt-4 font-display text-3xl ">
                 {formatMoney(calculation.totalRepayment, product.currency, locale)}
               </p>
             </CardContent>
@@ -253,7 +253,7 @@ function CalculatorPanel({
           <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
             <CardContent className="p-6">
               <Badge tone="neutral">Payment count</Badge>
-              <p className="mt-4 font-display text-3xl font-semibold">{calculation.amortization.length}</p>
+              <p className="mt-4 font-display text-3xl ">{calculation.amortization.length}</p>
             </CardContent>
           </Card>
         </div>
@@ -367,25 +367,25 @@ export function LoansOverviewPage() {
         <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
           <CardContent className="p-6">
             <Badge tone="positive">Active loans</Badge>
-            <p className="mt-4 font-display text-3xl font-semibold">{loans.filter((loan) => loan.status === "Active").length}</p>
+            <p className="mt-4 font-display text-3xl ">{loans.filter((loan) => loan.status === "Active").length}</p>
           </CardContent>
         </Card>
         <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
           <CardContent className="p-6">
             <Badge tone="warning">Monthly repayment</Badge>
-            <p className="mt-4 font-display text-3xl font-semibold">{formatMoney(activeLoan.monthlyRepayment, activeLoan.currency, locale)}</p>
+            <p className="mt-4 font-display text-3xl ">{formatMoney(activeLoan.monthlyRepayment, activeLoan.currency, locale)}</p>
           </CardContent>
         </Card>
         <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
           <CardContent className="p-6">
             <Badge tone="info">Outstanding balance</Badge>
-            <p className="mt-4 font-display text-3xl font-semibold">{formatMoney(activeLoan.outstandingBalance, activeLoan.currency, locale)}</p>
+            <p className="mt-4 font-display text-3xl ">{formatMoney(activeLoan.outstandingBalance, activeLoan.currency, locale)}</p>
           </CardContent>
         </Card>
         <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
           <CardContent className="p-6">
             <Badge tone="neutral">Next payment</Badge>
-            <p className="mt-4 font-display text-3xl font-semibold">{getCountdown(activeLoan.nextPaymentDueDate)}</p>
+            <p className="mt-4 font-display text-3xl ">{getCountdown(activeLoan.nextPaymentDueDate)}</p>
           </CardContent>
         </Card>
       </div>
@@ -410,7 +410,7 @@ export function LoansOverviewPage() {
               </div>
               <div className="rounded-[24px] border border-border/70 bg-secondary/20 p-5">
                 <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Repayment progress</p>
-                <p className="mt-3 font-display text-4xl font-semibold">{activeLoan.repaymentProgressPercent}%</p>
+                <p className="mt-3 font-display text-4xl ">{activeLoan.repaymentProgressPercent}%</p>
                 <Progress value={activeLoan.repaymentProgressPercent} className="mt-4 h-3" />
                 <p className="mt-4 text-sm text-muted-foreground">Next payment due: {formatDate(activeLoan.nextPaymentDueDate, locale)}</p>
                 <p className="mt-1 text-sm text-muted-foreground">{getCountdown(activeLoan.nextPaymentDueDate)}</p>
@@ -596,7 +596,7 @@ export function LoanApplicationPage() {
               <Badge tone={offer.decision === "approved" ? "positive" : "warning"}>
                 {offer.decision === "approved" ? "Approved" : "Referred"}
               </Badge>
-              <p className="font-display text-3xl font-semibold">
+              <p className="font-display text-3xl ">
                 {offer.decision === "approved" ? "Loan offer ready" : "Additional documents needed"}
               </p>
             </div>
@@ -736,7 +736,7 @@ export function LoanApplicationPage() {
 
               <div className="rounded-[24px] border border-[#C9A84C]/35 bg-[#F5F0E8] p-5">
                 <p className="text-sm font-medium">Debt-to-income ratio</p>
-                <p className="mt-3 font-display text-4xl font-semibold">{dti.toFixed(1)}%</p>
+                <p className="mt-3 font-display text-4xl ">{dti.toFixed(1)}%</p>
               </div>
             </div>
           ) : null}
@@ -830,7 +830,7 @@ export function LoanApplicationPage() {
           </div>
           <div className="rounded-[24px] bg-white/10 p-5">
             <p className="font-medium">Indicative repayment</p>
-            <p className="mt-3 font-display text-4xl font-semibold">{formatMoney(preview.monthlyRepayment, "NGN", locale)}</p>
+            <p className="mt-3 font-display text-4xl ">{formatMoney(preview.monthlyRepayment, "NGN", locale)}</p>
             <p className="mt-2 text-sm text-[#F5F0E8]/70">This preview uses the base rate for the selected loan type.</p>
           </div>
         </CardContent>
@@ -900,7 +900,7 @@ export function LoanDetailPage() {
 
             <div>
               <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Repaid</p>
-              <p className="mt-2 font-display text-4xl font-semibold">{loan.repaymentProgressPercent}%</p>
+              <p className="mt-2 font-display text-4xl ">{loan.repaymentProgressPercent}%</p>
               <Progress value={loan.repaymentProgressPercent} className="mt-4 h-3" />
             </div>
 

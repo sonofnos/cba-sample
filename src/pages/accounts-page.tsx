@@ -59,7 +59,7 @@ export function AccountsPage() {
         <Card className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Active accounts</p>
-            <p className="mt-3 font-display text-4xl font-semibold">
+            <p className="mt-3 font-display text-4xl ">
               {rows.filter((row) => row.status === "Active").length}
             </p>
             <p className="mt-2 text-xs text-muted-foreground">Across all markets and branches</p>
@@ -68,7 +68,7 @@ export function AccountsPage() {
         <Card className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Watchlist exposure</p>
-            <p className="mt-3 font-display text-4xl font-semibold">
+            <p className="mt-3 font-display text-4xl ">
               {rows.filter((row) => row.status === "Watchlist").length}
             </p>
             <p className="mt-2 text-xs text-muted-foreground">Flagged for enhanced monitoring</p>
@@ -77,7 +77,7 @@ export function AccountsPage() {
         <Card className="rounded-[28px] border-primary/10 bg-white/80 dark:bg-white/5">
           <CardContent className="p-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Branches represented</p>
-            <p className="mt-3 font-display text-4xl font-semibold">
+            <p className="mt-3 font-display text-4xl ">
               {new Set(rows.map((row) => row.branchName)).size}
             </p>
             <p className="mt-2 text-xs text-muted-foreground">Unique branch entities in view</p>

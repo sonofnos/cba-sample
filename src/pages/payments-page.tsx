@@ -323,7 +323,7 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 function SectionHeading({ title, description }: { title: string; description: string }) {
   return (
     <div className="space-y-1">
-      <h2 className="font-display text-2xl font-semibold">{title}</h2>
+      <h2 className="font-display text-2xl ">{title}</h2>
       <p className="text-sm text-muted-foreground">{description}</p>
     </div>
   );
@@ -350,7 +350,7 @@ function ReceiptCard({
             <CheckCircle2 className="h-7 w-7" />
           </div>
           <div>
-            <p className="font-display text-2xl font-semibold text-emerald-900">{title}</p>
+            <p className="font-display text-2xl  text-emerald-900">{title}</p>
             <p className="text-sm text-emerald-900/70">{subtitle}</p>
           </div>
         </div>
@@ -463,7 +463,7 @@ export function PaymentsOverviewPage() {
           <Card key={metric.label} className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
             <CardContent className="p-6">
               <Badge tone={metric.tone}>{metric.label}</Badge>
-              <p className="mt-4 font-display text-3xl font-semibold">{metric.value}</p>
+              <p className="mt-4 font-display text-3xl ">{metric.value}</p>
             </CardContent>
           </Card>
         ))}

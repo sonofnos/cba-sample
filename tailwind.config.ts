@@ -56,8 +56,9 @@ export default {
         danger: "#c2410c",
       },
       fontFamily: {
-        sans: ["'DM Sans'", "ui-sans-serif", "system-ui", "sans-serif"],
-        display: ["'Clash Display'", "'DM Sans'", "ui-sans-serif", "sans-serif"],
+        sans: ["'Inter'", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["'Instrument Serif'", "Georgia", "ui-serif", "serif"],
+        mono: ["'JetBrains Mono'", "ui-monospace", "monospace"],
       },
       boxShadow: {
         panel: "0 18px 45px rgba(10, 25, 20, 0.12)",

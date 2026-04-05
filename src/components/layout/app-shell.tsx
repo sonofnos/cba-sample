@@ -138,7 +138,7 @@ export function AppShell() {
                 <Landmark className="h-5 w-5" />
               </div>
               <div>
-                <p className="font-display text-xl font-semibold">PanAfrika Bank</p>
+                <p className="font-display text-xl ">PanAfrika Bank</p>
                 <p className="text-xs text-[#F5F0E8]/60">Control Center</p>
               </div>
             </div>
@@ -190,7 +190,7 @@ export function AppShell() {
                 <div className="rounded-xl bg-[#0A3D2E] p-2 text-[#F5F0E8]">
                   <Landmark className="h-4 w-4" />
                 </div>
-                <p className="font-display text-lg font-semibold">PanAfrika Bank</p>
+                <p className="font-display text-lg ">PanAfrika Bank</p>
               </div>
 
               <div className="hidden lg:block" />
@@ -226,7 +226,7 @@ export function AppShell() {
                   {notificationsOpen ? (
                     <div className="absolute right-0 mt-3 w-80 rounded-[24px] border border-border bg-white p-4 shadow-panel dark:bg-[#17352b]">
                       <div className="mb-3 flex items-center justify-between">
-                        <p className="font-display text-lg font-semibold">Notifications</p>
+                        <p className="font-display text-lg ">Notifications</p>
                         <span className="text-xs text-muted-foreground">{alerts.length} new</span>
                       </div>
                       <div className="space-y-3">

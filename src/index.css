@@ -44,6 +44,7 @@ html {
 
 body {
   @apply bg-background text-foreground font-sans antialiased transition-colors duration-300;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   background-image:
     radial-gradient(circle at top left, rgba(10, 61, 46, 0.14), transparent 26%),
     radial-gradient(circle at top right, rgba(201, 168, 76, 0.22), transparent 24%),

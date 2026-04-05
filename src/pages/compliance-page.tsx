@@ -44,7 +44,7 @@ const complianceNavItems = [
 function SectionHeading({ title, description }: { title: string; description: string }) {
   return (
     <div className="space-y-1">
-      <h2 className="font-display text-2xl font-semibold">{title}</h2>
+      <h2 className="font-display text-2xl ">{title}</h2>
       <p className="text-sm text-muted-foreground">{description}</p>
     </div>
   );
@@ -112,7 +112,7 @@ export function CompliancePage() {
         <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
           <CardContent className="p-8">
             <Badge tone="warning">Restricted</Badge>
-            <p className="mt-4 font-display text-3xl font-semibold">
+            <p className="mt-4 font-display text-3xl ">
               KYC, AML, sanctions, reporting, and audit workflows are not available to your role.
             </p>
           </CardContent>
@@ -307,10 +307,10 @@ export function ComplianceAmlAlertsPage() {
   return (
     <div className="space-y-6">
       <div className="grid gap-4 md:grid-cols-4">
-        <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5"><CardContent className="p-6"><Badge tone="info">Total Open</Badge><p className="mt-4 font-display text-3xl font-semibold">{alerts.filter((item) => item.status === "Open").length}</p></CardContent></Card>
-        <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5"><CardContent className="p-6"><Badge tone="danger">High Risk</Badge><p className="mt-4 font-display text-3xl font-semibold">{alerts.filter((item) => item.riskScore >= 75).length}</p></CardContent></Card>
-        <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5"><CardContent className="p-6"><Badge tone="warning">Escalated</Badge><p className="mt-4 font-display text-3xl font-semibold">{alerts.filter((item) => item.status === "Escalated").length}</p></CardContent></Card>
-        <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5"><CardContent className="p-6"><Badge tone="positive">Resolved today</Badge><p className="mt-4 font-display text-3xl font-semibold">{alerts.filter((item) => item.status === "Dismissed" || item.status === "SAR Filed").length}</p></CardContent></Card>
+        <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5"><CardContent className="p-6"><Badge tone="info">Total Open</Badge><p className="mt-4 font-display text-3xl ">{alerts.filter((item) => item.status === "Open").length}</p></CardContent></Card>
+        <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5"><CardContent className="p-6"><Badge tone="danger">High Risk</Badge><p className="mt-4 font-display text-3xl ">{alerts.filter((item) => item.riskScore >= 75).length}</p></CardContent></Card>
+        <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5"><CardContent className="p-6"><Badge tone="warning">Escalated</Badge><p className="mt-4 font-display text-3xl ">{alerts.filter((item) => item.status === "Escalated").length}</p></CardContent></Card>
+        <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5"><CardContent className="p-6"><Badge tone="positive">Resolved today</Badge><p className="mt-4 font-display text-3xl ">{alerts.filter((item) => item.status === "Dismissed" || item.status === "SAR Filed").length}</p></CardContent></Card>
       </div>
 
       <div className="grid gap-6 xl:grid-cols-[1.05fr_0.95fr]">

@@ -38,7 +38,7 @@ export function ArchitecturePage() {
         <div className="flex flex-col gap-4 rounded-[32px] border border-white/60 bg-white/70 p-5 shadow-panel backdrop-blur md:flex-row md:items-center md:justify-between dark:border-white/10 dark:bg-white/5">
           <div className="space-y-2">
             <p className="text-sm uppercase tracking-[0.18em] text-muted-foreground">Architecture</p>
-            <h1 className="font-display text-4xl font-semibold">PanAfrika Bank emulator system map</h1>
+            <h1 className="font-display text-4xl ">PanAfrika Bank emulator system map</h1>
           </div>
           <div className="flex items-center gap-3">
             <ThemeToggle theme={theme} onToggle={toggleTheme} />
@@ -62,7 +62,7 @@ export function ArchitecturePage() {
                       <Icon className="h-5 w-5" />
                     </div>
                     <div className="space-y-2">
-                      <h2 className="font-display text-2xl font-semibold">{pillar.title}</h2>
+                      <h2 className="font-display text-2xl ">{pillar.title}</h2>
                       <p className="text-sm leading-7 text-muted-foreground">{pillar.copy}</p>
                     </div>
                   </CardContent>
@@ -74,7 +74,7 @@ export function ArchitecturePage() {
 
         <div className="mt-8 rounded-[32px] border border-primary/10 bg-[#0A3D2E] p-8 text-[#F5F0E8] shadow-panel">
           <p className="text-sm uppercase tracking-[0.18em] text-[#C9A84C]">Deployment posture</p>
-          <h2 className="mt-3 font-display text-4xl font-semibold">Static-hosted, yet behaviorally complete</h2>
+          <h2 className="mt-3 font-display text-4xl ">Static-hosted, yet behaviorally complete</h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-[#F5F0E8]/78">
             React renders the operator surfaces, Zustand holds global bank context, React Query models asynchronous access,
             and Mock Service Worker intercepts every API request with seeded data and stateful mutations. The result is a

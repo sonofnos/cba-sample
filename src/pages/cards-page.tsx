@@ -97,7 +97,7 @@ function getLimitBounds(currency: string) {
 function SectionHeading({ title, description }: { title: string; description: string }) {
   return (
     <div className="space-y-1">
-      <h2 className="font-display text-2xl font-semibold">{title}</h2>
+      <h2 className="font-display text-2xl ">{title}</h2>
       <p className="text-sm text-muted-foreground">{description}</p>
     </div>
   );
@@ -187,7 +187,7 @@ function CardVisual({
         >
           <div className="flex items-start justify-between">
             <div>
-              <p className="font-display text-xl font-semibold">PanAfrika Bank</p>
+              <p className="font-display text-xl ">PanAfrika Bank</p>
               <p className="mt-1 text-xs uppercase tracking-[0.18em] text-white/70">{card.mode}</p>
             </div>
             <Badge tone={getStatusTone(card.status)}>{card.status}</Badge>
@@ -323,19 +323,19 @@ export function CardsOverviewPage() {
         <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
           <CardContent className="p-6">
             <Badge tone="info">Active cards</Badge>
-            <p className="mt-4 font-display text-3xl font-semibold">{cards.filter((card) => card.status === "Active").length}</p>
+            <p className="mt-4 font-display text-3xl ">{cards.filter((card) => card.status === "Active").length}</p>
           </CardContent>
         </Card>
         <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
           <CardContent className="p-6">
             <Badge tone="warning">Virtual cards</Badge>
-            <p className="mt-4 font-display text-3xl font-semibold">{cards.filter((card) => card.mode === "virtual").length}</p>
+            <p className="mt-4 font-display text-3xl ">{cards.filter((card) => card.mode === "virtual").length}</p>
           </CardContent>
         </Card>
         <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
           <CardContent className="p-6">
             <Badge tone="positive">Combined daily limit</Badge>
-            <p className="mt-4 font-display text-3xl font-semibold">
+            <p className="mt-4 font-display text-3xl ">
               {formatMoney(
                 cards.filter((card) => card.linkedCurrency === "NGN").reduce((sum, card) => sum + card.dailySpendLimit, 0),
                 "NGN",

@@ -209,7 +209,7 @@ function OrderBook({ rate }: { rate: SimulatedFxRate }) {
 function SectionHeading({ title, description }: { title: string; description: string }) {
   return (
     <div className="space-y-1">
-      <h2 className="font-display text-2xl font-semibold">{title}</h2>
+      <h2 className="font-display text-2xl ">{title}</h2>
       <p className="text-sm text-muted-foreground">{description}</p>
     </div>
   );
@@ -272,14 +272,14 @@ export function FxOverviewPage() {
         <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
           <CardContent className="p-6">
             <Badge tone="positive">Spot headline</Badge>
-            <p className="mt-4 font-display text-3xl font-semibold">{formatRate(majorRate.sell)}</p>
+            <p className="mt-4 font-display text-3xl ">{formatRate(majorRate.sell)}</p>
             <p className="mt-2 text-sm text-muted-foreground">USD/NGN sell</p>
           </CardContent>
         </Card>
         <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
           <CardContent className="p-6">
             <Badge tone="info">Tracked pairs</Badge>
-            <p className="mt-4 font-display text-3xl font-semibold">{displayPairs.length}</p>
+            <p className="mt-4 font-display text-3xl ">{displayPairs.length}</p>
           </CardContent>
         </Card>
         <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
@@ -293,7 +293,7 @@ export function FxOverviewPage() {
             <Badge tone={majorRate.changePercent >= 0 ? "positive" : "danger"}>
               {majorRate.changePercent >= 0 ? "▲" : "▼"} {majorRate.changePercent.toFixed(3)}%
             </Badge>
-            <p className="mt-4 font-display text-3xl font-semibold">{formatRate(Math.abs(majorRate.change))}</p>
+            <p className="mt-4 font-display text-3xl ">{formatRate(Math.abs(majorRate.change))}</p>
             <p className="mt-2 text-sm text-muted-foreground">Last tick move</p>
           </CardContent>
         </Card>
@@ -358,7 +358,7 @@ export function FxOverviewPage() {
                       {rate.changePercent >= 0 ? "▲" : "▼"} {rate.changePercent.toFixed(3)}%
                     </Badge>
                   </div>
-                  <p className="mt-3 font-display text-3xl font-semibold">{formatRate(rate.sell)}</p>
+                  <p className="mt-3 font-display text-3xl ">{formatRate(rate.sell)}</p>
                   <p className="mt-2 text-sm text-muted-foreground">Buy {formatRate(rate.buy)} | Sell {formatRate(rate.sell)}</p>
                 </div>
               );
@@ -437,7 +437,7 @@ export function FxConvertPage() {
           <CardContent className="p-8">
             <div className="mb-5 flex items-center gap-3">
               <Badge tone="positive">Conversion completed</Badge>
-              <p className="font-display text-3xl font-semibold">FX receipt</p>
+              <p className="font-display text-3xl ">FX receipt</p>
             </div>
             <div className="rounded-[24px] border border-emerald-200 bg-white p-6">
               <div className="flex items-center justify-between gap-4 border-b border-border/60 py-3 text-sm">
@@ -503,7 +503,7 @@ export function FxConvertPage() {
 
           <div className="rounded-[24px] border border-[#C9A84C]/35 bg-[#F5F0E8] p-5">
             <p className="text-sm font-medium">Rate preview</p>
-            <p className="mt-3 font-display text-4xl font-semibold">{formatMoney(convertedAmount, toCurrency, locale)}</p>
+            <p className="mt-3 font-display text-4xl ">{formatMoney(convertedAmount, toCurrency, locale)}</p>
             <p className="mt-3 text-sm text-muted-foreground">
               1 {fromCurrency} = {formatRate(quote.sell)} {toCurrency} · last updated {lastUpdatedLabel(quote.updatedAt, locale)}
             </p>
@@ -583,7 +583,7 @@ export function FxTradingDeskPage() {
       <Card className="rounded-[28px] border-primary/10 bg-white/85 dark:bg-white/5">
         <CardContent className="p-8">
           <Badge tone="warning">Restricted</Badge>
-          <p className="mt-4 font-display text-3xl font-semibold">Dealer desk access is limited to teller and admin roles.</p>
+          <p className="mt-4 font-display text-3xl ">Dealer desk access is limited to teller and admin roles.</p>
         </CardContent>
       </Card>
     );
@@ -655,7 +655,7 @@ export function FxTradingDeskPage() {
 
             <div className="rounded-[24px] border border-[#C9A84C]/35 bg-[#F5F0E8] p-5">
               <p className="text-sm font-medium">Indicative execution</p>
-              <p className="mt-3 font-display text-4xl font-semibold">{formatRate(selectedRate.mid)}</p>
+              <p className="mt-3 font-display text-4xl ">{formatRate(selectedRate.mid)}</p>
               <p className="mt-2 text-sm text-muted-foreground">Bid {formatRate(selectedRate.buy)} | Ask {formatRate(selectedRate.sell)}</p>
             </div>
 
@@ -828,7 +828,7 @@ export function FxRatesHistoryPage() {
 
             <div className="rounded-[24px] border border-[#C9A84C]/35 bg-[#F5F0E8] p-5">
               <p className="text-sm font-medium">Current mid</p>
-              <p className="mt-3 font-display text-4xl font-semibold">{formatRate(rates[pair]?.mid ?? 0)}</p>
+              <p className="mt-3 font-display text-4xl ">{formatRate(rates[pair]?.mid ?? 0)}</p>
               <p className="mt-2 text-sm text-muted-foreground">Updated {lastUpdatedLabel(rates[pair]?.updatedAt ?? new Date().toISOString(), locale)}</p>
             </div>
           </CardContent>

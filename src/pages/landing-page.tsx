@@ -53,7 +53,7 @@ export function LandingPage() {
                 <Landmark className="h-5 w-5" />
               </div>
               <div>
-                <p className="font-display text-lg font-semibold">PanAfrika Bank</p>
+                <p className="font-display text-lg ">PanAfrika Bank</p>
                 <p className="text-xs text-muted-foreground">bank.portfolio.sonofnos.com</p>
               </div>
             </Link>
@@ -85,7 +85,7 @@ export function LandingPage() {
               </div>
 
               <div className="space-y-5">
-                <h1 className="max-w-4xl font-display text-5xl font-semibold leading-[0.95] tracking-tight md:text-6xl xl:text-7xl">
+                <h1 className="max-w-4xl font-display text-5xl leading-[1.05] md:text-6xl xl:text-7xl">
                   Banking Infrastructure for a Continent
                 </h1>
                 <p className="max-w-2xl text-base leading-8 text-muted-foreground md:text-lg">
@@ -141,14 +141,14 @@ export function LandingPage() {
                 <Card className="border-white/60 bg-[#0A3D2E] text-[#F5F0E8] dark:border-white/10">
                   <CardContent className="p-5">
                     <p className="text-xs uppercase tracking-[0.18em] text-[#C9A84C]">HQ</p>
-                    <p className="mt-2 font-display text-3xl font-semibold">Lagos, Nigeria</p>
+                    <p className="mt-2 font-display text-3xl ">Lagos, Nigeria</p>
                     <p className="mt-2 text-sm text-[#F5F0E8]/72">Group operations command centre, treasury nerve centre, and primary control hub.</p>
                   </CardContent>
                 </Card>
                 <Card className="border-[#C46E4A]/20 bg-[#C46E4A]/10 dark:bg-[#C46E4A]/12">
                   <CardContent className="p-5">
                     <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Demonstrates</p>
-                    <p className="mt-2 font-display text-3xl font-semibold">Full CBA Stack</p>
+                    <p className="mt-2 font-display text-3xl ">Full CBA Stack</p>
                     <p className="mt-2 text-sm text-muted-foreground">From customer onboarding and deposits to payments, credit, compliance, and APIs.</p>
                   </CardContent>
                 </Card>
@@ -160,25 +160,25 @@ export function LandingPage() {
             <Card className="counter-glow rounded-[28px] border-primary/10 bg-white/75 dark:bg-white/5">
               <CardContent className="p-6">
                 <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Markets</p>
-                <p className="mt-3 font-display text-4xl font-semibold"><Counter value={7} /></p>
+                <p className="mt-3 font-display text-4xl "><Counter value={7} /></p>
               </CardContent>
             </Card>
             <Card className="counter-glow rounded-[28px] border-primary/10 bg-white/75 dark:bg-white/5">
               <CardContent className="p-6">
                 <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Currencies</p>
-                <p className="mt-3 font-display text-4xl font-semibold"><Counter value={14} /></p>
+                <p className="mt-3 font-display text-4xl "><Counter value={14} /></p>
               </CardContent>
             </Card>
             <Card className="counter-glow rounded-[28px] border-primary/10 bg-white/75 dark:bg-white/5">
               <CardContent className="p-6">
                 <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Banking Modules</p>
-                <p className="mt-3 font-display text-4xl font-semibold"><Counter value={32} /></p>
+                <p className="mt-3 font-display text-4xl "><Counter value={32} /></p>
               </CardContent>
             </Card>
             <Card className="counter-glow rounded-[28px] border-primary/10 bg-white/75 dark:bg-white/5">
               <CardContent className="p-6">
                 <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Simulated Accounts</p>
-                <p className="mt-3 font-display text-4xl font-semibold"><Counter value={2.4} suffix="M" decimals={1} /></p>
+                <p className="mt-3 font-display text-4xl "><Counter value={2.4} suffix="M" decimals={1} /></p>
               </CardContent>
             </Card>
           </section>
@@ -187,7 +187,7 @@ export function LandingPage() {
             <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">Modules</p>
-                <h2 className="mt-2 font-display text-4xl font-semibold">Eight entry points into the emulator</h2>
+                <h2 className="mt-2 font-display text-4xl ">Eight entry points into the emulator</h2>
               </div>
               <p className="max-w-2xl text-sm leading-7 text-muted-foreground">
                 Each module card acts as a launch surface into a key capability area, showing the breadth expected in a real core banking estate.
@@ -205,7 +205,7 @@ export function LandingPage() {
                           <Icon className="h-5 w-5" />
                         </div>
                         <div className="space-y-3">
-                          <h3 className="font-display text-2xl font-semibold">{module.title}</h3>
+                          <h3 className="font-display text-2xl ">{module.title}</h3>
                           <p className="text-sm leading-7 text-muted-foreground">{module.description}</p>
                         </div>
                         <div className="mt-auto flex items-center text-sm font-medium text-primary">
@@ -224,7 +224,7 @@ export function LandingPage() {
             <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr]">
               <div className="space-y-4">
                 <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">Architecture</p>
-                <h2 className="font-display text-4xl font-semibold">Five layers, one believable banking system</h2>
+                <h2 className="font-display text-4xl ">Five layers, one believable banking system</h2>
                 <p className="text-sm leading-7 text-muted-foreground">
                   The landing page frames the emulator as an actual bank platform: customer-facing channels connect through a secure gateway into core domain services, which then reach external networks and simulated data/control layers.
                 </p>
@@ -246,7 +246,7 @@ export function LandingPage() {
             <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">Stack</p>
-                <h2 className="mt-2 font-display text-4xl font-semibold">Web-hosted, interactive, zero-server required</h2>
+                <h2 className="mt-2 font-display text-4xl ">Web-hosted, interactive, zero-server required</h2>
               </div>
               <p className="max-w-2xl text-sm leading-7 text-muted-foreground">
                 The project is designed to deploy statically while still feeling like a live banking stack, using seeded data and a full browser-side API simulation.
@@ -274,7 +274,7 @@ export function LandingPage() {
         <footer className="mt-14 rounded-[32px] border border-white/60 bg-white/70 px-6 py-6 backdrop-blur dark:border-white/10 dark:bg-white/5">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="font-display text-2xl font-semibold">PanAfrika Bank</p>
+              <p className="font-display text-2xl ">PanAfrika Bank</p>
               <p className="text-sm text-muted-foreground">bank.portfolio.sonofnos.com</p>
             </div>
             <div className="flex flex-col gap-2 text-sm text-muted-foreground md:items-end">
